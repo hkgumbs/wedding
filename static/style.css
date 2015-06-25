@@ -1,7 +1,7 @@
 html {
     margin: 0;
     padding: 0;
-    background-color: #2C0D5E;
+    background-color: #1e0941;
     overflow: hidden;
 }
 body {
@@ -19,7 +19,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    opacity: .65;
+    opacity: .60;
 }
 .navigation {
     width: 100%;
