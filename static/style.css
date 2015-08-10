@@ -30,6 +30,19 @@ body {
     margin: 60px auto 0px;
 }
 
+.modal .actions {
+    text-align: center;
+}
+
+.modal .actions .action {
+    border-radius: 50%;
+    border-width: 0px;
+    background-color: #1e0941;
+    padding: 32px;
+    margin: 32px;
+    display: inline-block;
+}
+
 .modal .navigation {
     border-color: :333333;
 }
