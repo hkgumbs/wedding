@@ -3,24 +3,51 @@ html {
     padding: 0;
     background-color: #1e0941;
     overflow: hidden;
+    font-family: 'Poiret One', cursive;
 }
+
 body {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
 }
+
 .cover {
+    background: url(cover.jpg) no-repeat center center fixed;
+    opacity: .60;
+}
+
+.modal {
+    display: none;
+    background-color: #ffffff;
+}
+
+.modal .contents .text {
+    color: #000000;
+    font-size: 24px;
+    width: 740px;
+    margin: 60px auto 0px;
+}
+
+.modal .navigation {
+    border-color: :333333;
+}
+
+.modal .navigation * {
+    color: #333333;
+}
+
+.modal, .cover {
     height: 100%;
     width: 100%;
     position: absolute;
-    background: url(cover.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    opacity: .60;
 }
+
 .navigation {
     width: 100%;
     max-width: 740px;
@@ -31,19 +58,25 @@ body {
     margin: 0 auto;
     padding: 15px 0;
     text-align: center;
-    border-top: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
 }
-.navigation > * {
-    width: 148px;
+
+body > .navigation {
+    border-color: #ffffff;
+}
+
+body > .navigation * {
+    width: 185px;
     display: table-cell;
     vertical-align: middle;
     color: #ffffff;
 }
+
 a {
     text-transform: uppercase;
-    font-family: 'Poiret One', cursive;
 }
+
 a:link {
     text-decoration: none;
 }
