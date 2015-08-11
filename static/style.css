@@ -23,11 +23,15 @@ body {
     background-color: #ffffff;
 }
 
+.modal .contents {
+    max-width: 1024px;
+    margin: 60px auto 0;
+    padding: 0 24px;
+}
+
 .modal .contents .text {
     color: #000000;
     font-size: 32px;
-    width: 740px;
-    margin: 60px auto 0px;
 }
 
 .modal .navigation {
