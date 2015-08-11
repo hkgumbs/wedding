@@ -25,7 +25,7 @@ body {
 
 .modal .contents .text {
     color: #000000;
-    font-size: 24px;
+    font-size: 32px;
     width: 740px;
     margin: 60px auto 0px;
 }
@@ -34,21 +34,12 @@ body {
     text-align: center;
 }
 
-.modal .actions .action {
-    border-radius: 50%;
-    border-width: 0px;
-    background-color: #1e0941;
-    padding: 32px;
-    margin: 32px;
-    display: inline-block;
-}
-
 .modal .navigation {
-    border-color: :333333;
+    background-color: #1e0941;
 }
 
 .modal .navigation * {
-    color: #333333;
+    color: #ffffff;
 }
 
 .modal, .cover {
@@ -71,22 +62,23 @@ body {
     margin: 0 auto;
     padding: 15px 0;
     text-align: center;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
+    border-radius: 3px;
 }
 
 body > .navigation {
-    border-color: #ffffff;
+    background-color: #ffffff;
 }
 
 body > .navigation * {
     width: 185px;
     display: table-cell;
     vertical-align: middle;
-    color: #ffffff;
+    color: #1e0941;
+    border-color: #1e0941;
 }
 
-a {
+.navigation a {
+    font-size: 24px;
     text-transform: uppercase;
 }
 
