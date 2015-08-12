@@ -25,7 +25,7 @@ body {
 
 .modal .contents {
     max-width: 1024px;
-    margin: 60px auto 0;
+    margin: 24px auto 0;
     padding: 0 24px;
 }
 
@@ -68,6 +68,10 @@ body {
     .navigation {
         border-radius: 3px;
     }
+
+    .modal .contents {
+        margin: 60px auto 0;
+    }
 }
 
 body > .navigation {
@@ -103,3 +107,8 @@ a:hover {
 a:active {
     text-decoration: none;
 }
+
+p {
+    margin: 0;
+}
+
