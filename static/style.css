@@ -1,7 +1,7 @@
 html {
     margin: 0;
     padding: 0;
-    background-color: #1e0941;
+    background-color: #4a1457;
     overflow: hidden;
     font-family: 'Poiret One', cursive;
 }
@@ -37,7 +37,7 @@ body {
 }
 
 .modal .navigation {
-    background-color: #1e0941;
+    background-color: #4a1457;
 }
 
 .modal .navigation * {
@@ -88,8 +88,8 @@ body > .navigation * {
     width: 185px;
     display: table-cell;
     vertical-align: middle;
-    color: #1e0941;
-    border-color: #1e0941;
+    color: #4a1457;
+    border-color: #4a1457;
 }
 
 .navigation a {
