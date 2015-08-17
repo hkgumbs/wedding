@@ -24,9 +24,11 @@ body {
 }
 
 .modal .contents {
-    max-width: 1024px;
-    margin: 24px auto 0;
-    padding: 0 24px;
+    padding: 45px;
+    position: absolute;
+    top: 0;
+    bottom: 124px;
+    overflow-y: scroll;
 }
 
 .modal .contents .text {
@@ -64,13 +66,17 @@ body {
     text-align: center;
 }
 
+.fade {
+    height: 60px;
+    width: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    position: absolute;
+    bottom: 124px;
+}
+
 @media screen and (min-width: 744px) {
     .navigation {
         border-radius: 3px;
-    }
-
-    .modal .contents {
-        margin: 60px auto 0;
     }
 }
 
@@ -110,5 +116,6 @@ a:active {
 
 p {
     margin: 0;
+    white-space: pre-line;
 }
 
