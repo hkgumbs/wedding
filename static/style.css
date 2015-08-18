@@ -23,17 +23,12 @@ body {
     background-color: #ffffff;
 }
 
-.modal .contents {
-    padding: 45px;
+.contents {
+    padding: 45px 12%;
     position: absolute;
     top: 0;
     bottom: 124px;
     overflow-y: scroll;
-}
-
-.modal .contents .text {
-    color: #000000;
-    font-size: 32px;
 }
 
 .modal .navigation {
@@ -115,6 +110,8 @@ a:active {
 }
 
 p {
+    color: #000000;
+    font-size: 32px;
     margin: 0;
     white-space: pre-line;
 }
