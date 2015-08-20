@@ -68,6 +68,7 @@ body {
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
     position: absolute;
     bottom: 124px;
+    pointer-events: none;
 }
 
 @media screen and (min-width: 744px) {
