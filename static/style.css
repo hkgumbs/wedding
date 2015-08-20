@@ -27,7 +27,7 @@ body {
     padding: 45px 12%;
     position: absolute;
     top: 0;
-    bottom: 124px;
+    bottom: 105px;
     width: 76%;
     overflow-y: scroll;
 }
@@ -67,7 +67,7 @@ body {
     width: 100%;
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
     position: absolute;
-    bottom: 124px;
+    bottom: 105px;
     pointer-events: none;
 }
 
