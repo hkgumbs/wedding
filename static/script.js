@@ -1,13 +1,24 @@
-var text = {};
-
-function onClickListener(e) {
-    var value = $(this).attr('value');
-    if (value) {
-        $('.modal .text').text(text[value]);
-        $('.modal').fadeIn();
-    } else
-        $('.modal').fadeOut();
+function setContents(data) {
+    $('.modal .contents').html(data);
 }
 
-$('a[href="#"]').on('click', onClickListener)
+function loadAjax(callback) {
+    if (typeof callback !== "function")
+        callback = function(){};
+    $.ajax($(this).attr('value')).done(callback);
+}
+
+function createModal() {
+    this.f = loadAjax;
+    this.f(setContents);
+    $('.modal').fadeIn();
+}
+
+function hideModal() {
+    $('.modal').fadeOut();
+}
+
+$('a[value]').each(loadAjax);
+$('a[value]').on('click', createModal);
+$('a[back]').on('click', hideModal);
 
