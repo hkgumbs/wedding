@@ -1,4 +1,4 @@
-var connecting = "<p>Loading...</p>";
+var loading = "<p>Loading...</p>";
 
 function getValue(link) {
     return $(link).attr('value');
@@ -9,7 +9,7 @@ function cacheContent() {
 }
 
 function createModal() {
-    $('.modal .contents').html(connecting);
+    $('.modal .contents').html(loading);
     $('.modal .contents').load(getValue(this));
     $('.modal').fadeIn();
 }
