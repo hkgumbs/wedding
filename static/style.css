@@ -97,6 +97,7 @@ body > .navigation * {
 a:hover {
     text-decoration: none;
     opacity: .65;
+    cursor: pointer;
 }
 
 a:link {
