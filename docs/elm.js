@@ -8006,36 +8006,98 @@ var _user$project$Venue$content = _elm_lang$core$Native_List.fromArray(
 
 var _user$project$Rsvp$link = 'https://docs.google.com/forms/d/1C0zVLk1ApO1EvDX2gZElkpIyLfkfV6wBMwHapr59YFc/viewform';
 
-var _user$project$Main$content = function (msg) {
-	var _p0 = msg;
-	switch (_p0.ctor) {
-		case 'Home':
-			return _elm_lang$core$Native_List.fromArray(
-				[]);
-		case 'Story':
-			return _user$project$Story$content;
-		case 'Registry':
-			return _user$project$Registry$content;
-		default:
-			return _user$project$Venue$content;
-	}
-};
 var _user$project$Main$Venue = {ctor: 'Venue'};
 var _user$project$Main$Registry = {ctor: 'Registry'};
 var _user$project$Main$Story = {ctor: 'Story'};
+var _user$project$Main$home = A2(
+	_elm_lang$html$Html$div,
+	_elm_lang$core$Native_List.fromArray(
+		[
+			_elm_lang$html$Html_Attributes$class('home')
+		]),
+	_elm_lang$core$Native_List.fromArray(
+		[
+			A2(
+			_elm_lang$html$Html$div,
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html_Attributes$class('cover')
+				]),
+			_elm_lang$core$Native_List.fromArray(
+				[])),
+			A2(
+			_elm_lang$html$Html$div,
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html_Attributes$class('navigation')
+				]),
+			_elm_lang$core$Native_List.fromArray(
+				[
+					A2(
+					_elm_lang$html$Html$a,
+					_elm_lang$core$Native_List.fromArray(
+						[
+							_elm_lang$html$Html_Events$onClick(_user$project$Main$Story)
+						]),
+					_elm_lang$core$Native_List.fromArray(
+						[
+							_elm_lang$html$Html$text('Story')
+						])),
+					A2(
+					_elm_lang$html$Html$a,
+					_elm_lang$core$Native_List.fromArray(
+						[
+							_elm_lang$html$Html_Events$onClick(_user$project$Main$Registry)
+						]),
+					_elm_lang$core$Native_List.fromArray(
+						[
+							_elm_lang$html$Html$text('Registry')
+						])),
+					A2(
+					_elm_lang$html$Html$a,
+					_elm_lang$core$Native_List.fromArray(
+						[
+							_elm_lang$html$Html_Events$onClick(_user$project$Main$Venue)
+						]),
+					_elm_lang$core$Native_List.fromArray(
+						[
+							_elm_lang$html$Html$text('Venue')
+						])),
+					A2(
+					_elm_lang$html$Html$a,
+					_elm_lang$core$Native_List.fromArray(
+						[
+							_elm_lang$html$Html_Attributes$href(_user$project$Rsvp$link),
+							_elm_lang$html$Html_Attributes$target('_blank')
+						]),
+					_elm_lang$core$Native_List.fromArray(
+						[
+							_elm_lang$html$Html$text('RSVP')
+						]))
+				]))
+		]));
 var _user$project$Main$Home = {ctor: 'Home'};
-var _user$project$Main$view = function (msg) {
+var _user$project$Main$modal = function (content) {
 	return A2(
-		_elm_lang$html$Html$body,
+		_elm_lang$html$Html$div,
 		_elm_lang$core$Native_List.fromArray(
-			[]),
+			[
+				_elm_lang$html$Html_Attributes$class('modal')
+			]),
 		_elm_lang$core$Native_List.fromArray(
 			[
 				A2(
 				_elm_lang$html$Html$div,
 				_elm_lang$core$Native_List.fromArray(
 					[
-						_elm_lang$html$Html_Attributes$class('cover')
+						_elm_lang$html$Html_Attributes$class('contents')
+					]),
+				content),
+				A2(
+				_elm_lang$html$Html$div,
+				_elm_lang$core$Native_List.fromArray(
+					[
+						_elm_lang$html$Html_Attributes$class('fade')
 					]),
 				_elm_lang$core$Native_List.fromArray(
 					[])),
@@ -8051,90 +8113,27 @@ var _user$project$Main$view = function (msg) {
 						_elm_lang$html$Html$a,
 						_elm_lang$core$Native_List.fromArray(
 							[
-								_elm_lang$html$Html_Events$onClick(_user$project$Main$Story)
+								_elm_lang$html$Html_Events$onClick(_user$project$Main$Home)
 							]),
 						_elm_lang$core$Native_List.fromArray(
 							[
-								_elm_lang$html$Html$text('Story')
-							])),
-						A2(
-						_elm_lang$html$Html$a,
-						_elm_lang$core$Native_List.fromArray(
-							[
-								_elm_lang$html$Html_Events$onClick(_user$project$Main$Registry)
-							]),
-						_elm_lang$core$Native_List.fromArray(
-							[
-								_elm_lang$html$Html$text('Registry')
-							])),
-						A2(
-						_elm_lang$html$Html$a,
-						_elm_lang$core$Native_List.fromArray(
-							[
-								_elm_lang$html$Html_Events$onClick(_user$project$Main$Venue)
-							]),
-						_elm_lang$core$Native_List.fromArray(
-							[
-								_elm_lang$html$Html$text('Venue')
-							])),
-						A2(
-						_elm_lang$html$Html$a,
-						_elm_lang$core$Native_List.fromArray(
-							[
-								_elm_lang$html$Html_Attributes$href(_user$project$Rsvp$link),
-								_elm_lang$html$Html_Attributes$target('_blank')
-							]),
-						_elm_lang$core$Native_List.fromArray(
-							[
-								_elm_lang$html$Html$text('Story')
-							]))
-					])),
-				A2(
-				_elm_lang$html$Html$div,
-				_elm_lang$core$Native_List.fromArray(
-					[
-						_elm_lang$html$Html_Attributes$class('modal'),
-						_elm_lang$html$Html_Attributes$hidden(
-						_elm_lang$core$Native_Utils.eq(msg, _user$project$Main$Home))
-					]),
-				_elm_lang$core$Native_List.fromArray(
-					[
-						A2(
-						_elm_lang$html$Html$div,
-						_elm_lang$core$Native_List.fromArray(
-							[
-								_elm_lang$html$Html_Attributes$class('contents')
-							]),
-						_user$project$Main$content(msg)),
-						A2(
-						_elm_lang$html$Html$div,
-						_elm_lang$core$Native_List.fromArray(
-							[
-								_elm_lang$html$Html_Attributes$class('fade')
-							]),
-						_elm_lang$core$Native_List.fromArray(
-							[])),
-						A2(
-						_elm_lang$html$Html$div,
-						_elm_lang$core$Native_List.fromArray(
-							[
-								_elm_lang$html$Html_Attributes$class('navigation')
-							]),
-						_elm_lang$core$Native_List.fromArray(
-							[
-								A2(
-								_elm_lang$html$Html$a,
-								_elm_lang$core$Native_List.fromArray(
-									[
-										_elm_lang$html$Html_Events$onClick(_user$project$Main$Home)
-									]),
-								_elm_lang$core$Native_List.fromArray(
-									[
-										_elm_lang$html$Html$text('Back')
-									]))
+								_elm_lang$html$Html$text('Back')
 							]))
 					]))
 			]));
+};
+var _user$project$Main$view = function (msg) {
+	var _p0 = msg;
+	switch (_p0.ctor) {
+		case 'Home':
+			return _user$project$Main$home;
+		case 'Story':
+			return _user$project$Main$modal(_user$project$Story$content);
+		case 'Registry':
+			return _user$project$Main$modal(_user$project$Registry$content);
+		default:
+			return _user$project$Main$modal(_user$project$Venue$content);
+	}
 };
 var _user$project$Main$main = {
 	main: _elm_lang$html$Html_App$beginnerProgram(

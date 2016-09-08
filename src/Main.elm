@@ -20,38 +20,42 @@ type Msg
 
 view : Msg -> Html Msg
 view msg =
-    body []
+    case msg of
+        Home ->
+            home
+
+        Story ->
+            modal Story.content
+
+        Registry ->
+            modal Registry.content
+
+        Venue ->
+            modal Venue.content
+
+
+home : Html Msg
+home =
+    div [ class "home" ]
         [ div [ class "cover" ] []
         , div [ class "navigation" ]
             [ a [ onClick Story ] [ text "Story" ]
             , a [ onClick Registry ] [ text "Registry" ]
             , a [ onClick Venue ] [ text "Venue" ]
-            , a [ href Rsvp.link, target "_blank" ] [ text "Story" ]
-            ]
-        , div [ class "modal", hidden (msg == Home) ]
-            [ div [ class "contents" ] (content msg)
-            , div [ class "fade" ] []
-            , div [ class "navigation" ]
-                [ a [ onClick Home ] [ text "Back" ]
-                ]
+            , a [ href Rsvp.link, target "_blank" ] [ text "RSVP" ]
             ]
         ]
 
 
-content : Msg -> List (Html a)
-content msg =
-    case msg of
-        Home ->
-            []
-
-        Story ->
-            Story.content
-
-        Registry ->
-            Registry.content
-
-        Venue ->
-            Venue.content
+modal : List (Html Msg) -> Html Msg
+modal content =
+    div [ class "modal" ]
+        [ div [ class "contents" ] content
+        , div [ class "fade" ] []
+        , div [ class "navigation" ]
+            [ a [ onClick Home ] [ text "Back" ]
+            ]
+        ]
 
 
 
